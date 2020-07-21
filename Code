@@ -1,0 +1,92 @@
+# Snake-Water-Gun-Game
+import random
+print("You have 10 rounds for this game!\n")
+i=0
+human=0
+comp=0
+print("\nEnter among the three options:\n ")
+print("\nsnake\nwater\ngun\n")
+print("*************************")
+while(i<10):
+
+    c=input("Enter Your Choice:")
+    c=str(c)
+    lst=["snake","water","gun"]
+    lst1=random.choice(lst)
+    lst1=str(lst1)
+    if (c=="snake" and lst1=="water"):
+        print("Comp Choice:"+ lst1)
+        print("You Won")
+        i+=1
+        human+=1
+        print("Chances left are:"+str(10-i)+"\n")
+    elif(c=="snake" and lst1=="gun"):
+         print("Comp Choice:"+ lst1)
+         print("You Lost")
+         i+=1
+         comp+=1
+         # print("Chances left are:" + str(10 - i))
+         print("Chances left are:" + str(10 - i) + "\n")
+    elif (c == "snake" and lst1 == "snake"):
+            print("Comp Choice:" + lst1)
+            print("Its a Tie")
+            i += 1
+            # print("Chances left are:" + str(10 - i))
+            print("Chances left are:" + str(10 - i) + "\n")
+    elif(c=="water" and lst1=="snake"):
+            print("Comp Choice:"+ lst1)
+            print("You Lost")
+            i+=1
+            comp+=1
+            # print("Chances left are:" + str(10 - i))
+            print("Chances left are:" + str(10 - i) + "\n")
+    elif(c=="water" and lst1=="water"):
+            print("Comp Choice:"+ lst1)
+            print("Its A Tie")
+            i+=1
+            # print("Chances left are:" + str(10 - i))
+            print("Chances left are:" + str(10 - i) + "\n")
+    elif(c=="water" and lst1=="gun"):
+            print("Comp Choice:"+ lst1)
+            print("You won")
+            i+=1
+            human+=1
+            # print("Chances left are:" + str(10 - i))
+            print("Chances left are:" + str(10 - i) + "\n")
+    elif(c=="gun" and lst1=="snake"):
+            print("Comp Choice:"+ lst1)
+            print("You Won")
+            i+=1
+            human+=1
+            # print("Chances left are:" + str(10 - i))
+            print("Chances left are:" + str(10 - i) + "\n")
+    elif(c=="gun" and lst1=="water"):
+            print("Comp Choice:"+ lst1)
+            print("You Lost")
+            i+=1
+            comp+=1
+            # print("Chances left are:" + str(10 - i))
+            print("Chances left are:" + str(10 - i) + "\n")
+    elif(c=="gun" and lst1=="gun"):
+            print("Comp Choice:"+ lst1)
+            print("Its a Tie")
+            i+=1
+            # print("Chances left are:" + str(10 - i))
+            print("Chances left are:" + str(10 - i) + "\n")
+    else:
+            print("\nEnter Corrct Option!\n")
+            # i+=1
+            # print("Chances left are:" + str(10 - i) + "\n")
+print("\nRounds won by you:"+str(human))
+print("\nRounds won by comp:"+str(comp))
+if(human>comp):
+    print("\n******YOU ARE WINNER******\n")
+elif(comp>human):
+    print("\n******COMPUTER IS WINNER******\n")
+else:
+    print("\n******IT IS A TIE******\n")
+
+
+
+
+
